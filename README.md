@@ -47,7 +47,7 @@ cp .env.example .env
 1. **Create a Slack App:**
    - Visit [Slack API Apps](https://api.slack.com/apps).
    - Click on "Create New App" > "From Manifest".
-     ```
+```
      {
     "display_information": {
         "name": "Leave Manager",
@@ -98,6 +98,7 @@ cp .env.example .env
     }
 }
 ```
+
 2. **Set Environment Variables:**
 .env file configuration
 ```
