@@ -33,22 +33,71 @@ Clone the repository
 ```
 git clone repo URL
 cd slack-leave-manager
+```
 Install dependencies
+```
 npm install
+```
 Configure environment variables
+```
 cp .env.example .env
 ```
 
 ## Configuration
 1. **Create a Slack App:**
    - Visit [Slack API Apps](https://api.slack.com/apps).
-   - Click on "Create New App" > "From scratch".
-   - Enable Socket Mode.
-   - Add the following scopes:
-     - `chat:write`
-     - `commands`  
-     - `users:read`
-
+   - Click on "Create New App" > "From Manifest".
+     ```
+     {
+    "display_information": {
+        "name": "Leave Manager",
+        "description": "Leave request and approval management system",
+        "background_color": "#de4b07",
+        "long_description": "A simple app to request, track, and manage leave directly in Slack. Employees can submit requests, managers can approve instantly, and everyone stays updated with automated notifications. Stay organized without leaving Slack! 🚀\r\n\r\nCreated By Niwin Kumar."
+    },
+    "features": {
+        "bot_user": {
+            "display_name": "Leave Manager",
+            "always_online": true
+        },
+        "slash_commands": [
+            {
+                "command": "/apply-leave",
+                "description": "Submit a leave application",
+                "should_escape": false
+            }
+        ]
+    },
+    "oauth_config": {
+        "scopes": {
+            "bot": [
+                "chat:write",
+                "commands",
+                "users:read",
+                "users:read.email",
+                "im:write",
+                "im:read",
+                "app_mentions:read",
+                "im:history"
+            ]
+        }
+    },
+    "settings": {
+        "event_subscriptions": {
+            "bot_events": [
+                "app_mention",
+                "message.im"
+            ]
+        },
+        "interactivity": {
+            "is_enabled": true
+        },
+        "org_deploy_enabled": false,
+        "socket_mode_enabled": true,
+        "token_rotation_enabled": false
+    }
+}
+```
 2. **Set Environment Variables:**
 .env file configuration
 ```
