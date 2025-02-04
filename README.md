@@ -1,4 +1,3 @@
-text
 # Slack Leave Manager
 
 ## Table of Contents
@@ -31,13 +30,14 @@ Slack Leave Manager is a Slack bot designed to manage employee leave requests wi
 
 ## Installation
 Clone the repository
-git clone https://github.com/YOUR_USERNAME/slack-leave-manager.git
+```
+git clone repo URL
 cd slack-leave-manager
 Install dependencies
 npm install
 Configure environment variables
 cp .env.example .env
-text
+```
 
 ## Configuration
 1. **Create a Slack App:**
@@ -51,18 +51,22 @@ text
 
 2. **Set Environment Variables:**
 .env file configuration
+```
 SLACK_BOT_TOKEN=xoxb-your-token
 SLACK_SIGNING_SECRET=your-secret
 SLACK_APP_TOKEN=xapp-your-token
 DATABASE_URL=mongodb+srv://...
-text
+```
 
 ## Usage
 For development mode
+```
 npm run dev
+```
 For production mode
+```
 npm start
-text
+```
 
 ### In Slack:
 1. Type `/apply-leave`.
@@ -74,14 +78,21 @@ text
 
 ## Development
 Install development dependencies
+```
 npm install --save-dev nodemon eslint
+```
 Run linter to check code quality
+```
 npm run lint
+```
 Run tests to ensure functionality
+```
 npm test
+```
 Build the project for production
+```
 npm run build
-text
+```
 
 ## Architecture
 - Built using Node.js and the Bolt Framework.
