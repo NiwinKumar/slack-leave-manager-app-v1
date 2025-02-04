@@ -151,8 +151,9 @@ npm run build
 - Follows an event-driven architecture and MVC pattern.
 
 ## Project Structure
+```
 slack-leave-manager/
-├── src/
+├── src
 │ ├── app.js # Entry point of the application
 │ ├── bot/ # Contains bot logic and handlers
 │ ├── commands/ # Command handlers for Slack commands
@@ -160,7 +161,7 @@ slack-leave-manager/
 │ └── utils/ # Helper functions and utilities
 ├── .env # Environment variable configuration file
 └── package.json # Project metadata and dependencies
-text
+```
 
 ## License
-MIT © [NIWIN_KUMAR]
+MIT © Niwin Kumar
